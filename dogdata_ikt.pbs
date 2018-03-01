@@ -1,0 +1,14 @@
+#/bin/bash
+#PBS -N dogdata_forest_py
+#PBS -l nodes=1:ppn=16,feature=16core
+#PBS -l walltime=24:00:00
+#PBS -j oe
+#PBS -o /gscratch/stf/soyiu100/dogDataRun
+#PBS -d /gscratch/stf/soyiu100/dogDataRun
+#PBS -q batch
+
+module load anaconda3_4.2
+
+python dogdata_forest.py
+
+exit 0
